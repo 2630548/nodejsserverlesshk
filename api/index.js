@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
 
     // 设置响应头
     res.setHeader('Content-Type', contentType) // 动态设置 Content-Type
-    if(contentType=='video/mp2t'||contentType='application/vnd.apple.mpegurl'){
+    if(contentType=='video/mp2t'||contentType=='application/vnd.apple.mpegurl'){
     res.setHeader('Content-Disposition', `attachment; filename="${filename}"`)
     }
     res.setHeader('Access-Control-Allow-Origin', '*')
