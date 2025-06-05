@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
 
     // 检查响应状态
     if (!response.ok) {
-      return res.status(response.status).json({ error: '无法获取数据 '+response.body, status: response.status })
+      // return res.status(response.status).json({ error: '无法获取数据 ', body: response.body, status: response.status })
     }
 
     // 获取目标响应的 Content-Type 和流
@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
 
     // 设置响应头
     res.setHeader('Content-Type', contentType) // 动态设置 Content-Type
-    if(contentType=='video/mp2t'){
+    if(contentType=='video/mp2t'||contentType='application/vnd.apple.mpegurl'){
     res.setHeader('Content-Disposition', `attachment; filename="${filename}"`)
     }
     res.setHeader('Access-Control-Allow-Origin', '*')
