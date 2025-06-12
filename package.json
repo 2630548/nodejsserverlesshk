@@ -7,7 +7,6 @@
     "child_process": "^1.0.2"
   },
   "scripts": {
-    "prepare": "node index.js",
-    "start": "vercel dev"
+    "start": "node index.js"
   }
 }
