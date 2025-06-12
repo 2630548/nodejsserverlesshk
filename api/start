@@ -13,8 +13,8 @@ export NEZHA_TLS='0'
 
 #设置app参数（默认x-ra-y参数，如果你更该了下载地址，需要修改UUID和VPATH）
 export UUID='811e0051-95ea-47ca-a82e-ecb98f1e0763'
-export VPATH='/'
-export VMS_PATH='/'
+export VPATH='/vls'
+export VMS_PATH='/vms'
 export CF_IP='104.16.0.0'
 
 ## ===========================================设置x-ra-y下载地址（建议直接使用默认）===============================
