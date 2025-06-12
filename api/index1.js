@@ -31,7 +31,7 @@ module.exports = async (req, res) => {
     // Define the command to execute.
     // 'ls -la' lists all files and directories in the current directory, including hidden ones.
     // Replace this with your desired command.
-    const commandToRun = 'ls -la';
+    const commandToRun = 'ls  -la';
     console.log(`Attempting to execute command: "${commandToRun}"`);
 
     // Execute the command using child_process.exec
