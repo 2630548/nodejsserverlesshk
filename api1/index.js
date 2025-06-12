@@ -13,7 +13,7 @@ const execPromise = promisify(exec);
  * @param {object} req - The HTTP request object.
  * @param {object} res - The HTTP response object.
  */
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   // Set CORS headers to allow requests from any origin (for testing purposes)
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
