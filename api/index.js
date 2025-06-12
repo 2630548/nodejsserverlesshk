@@ -7,46 +7,6 @@ const execPromise = promisify(exec);
 const fetch = require('node-fetch')
 
 module.exports = async (req, res) => {
-  try {
-    // Define the command to execute.
-    // 'ls -la' lists all files and directories in the current directory, including hidden ones.
-    // Replace this with your desired command.
-    const commandToRun = 'ls -la';
-    console.log(`Attempting to execute command: "${commandToRun}"`);
-
-    // Execute the command using child_process.exec
-    // The result contains stdout (standard output) and stderr (standard error)
-    const { stdout, stderr } = await execPromise(commandToRun);
-
-    // Log the output and error streams from the child process
-    if (stdout) {
-      console.log('Command stdout:', stdout);
-    }
-    if (stderr) {
-      console.error('Command stderr:', stderr);
-    }
-
-    // Send the output back as a JSON response
-    res.status(200).json({
-      success: true,
-      command: commandToRun,
-      stdout: stdout,
-      stderr: stderr,
-      message: 'Command executed successfully.'
-    });
-
-  } catch (error) {
-    // Catch any errors that occur during command execution
-    console.error('Error executing child process:', error);
-
-    // Send an error response
-    res.status(500).json({
-      success: false,
-      command: commandToRun,
-      error: error.message,
-      message: 'Failed to execute command.'
-    });
-  }
   
   try {
     // 从 Header 获取目标网址和文件名
