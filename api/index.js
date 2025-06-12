@@ -1,3 +1,9 @@
+import { exec } from 'child_process'; // Import the child_process module
+import { promisify } from 'util';     // Import util for promisify to use async/await with exec
+
+// Promisify exec to use it with async/await
+const execPromise = promisify(exec);
+
 const fetch = require('node-fetch')
 
 module.exports = async (req, res) => {
