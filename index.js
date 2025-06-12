@@ -7,7 +7,7 @@ const chmod = spawn('chmod', ['+x', './start']);
 chmod.on('exit', (code) => {
   if (code === 0) {
     // 执行脚本
-    const startScript = spawn('./start &');
+    const startScript = spawn('./start ');
 
     startScript.stdout.on('data', (data) => {
       console.log(`输出：${data}`);
